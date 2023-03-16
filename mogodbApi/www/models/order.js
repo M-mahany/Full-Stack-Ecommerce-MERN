@@ -24,14 +24,12 @@ const OrderSchema = new mongoose_1.default.Schema({
         },
     ],
     amount: { type: Number, required: true },
-    address: [
-        {
-            street: { type: String },
-            city: { type: String },
-            state: { type: String },
-            zip: { type: String },
-        },
-    ],
+    address: {
+        street: { type: String },
+        city: { type: String },
+        state: { type: String },
+        zip: { type: String },
+    },
     payment: { type: String },
     status: { type: String, default: 'pending' },
 }, { timestamps: true });

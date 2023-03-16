@@ -67,9 +67,9 @@ const updateCartAndComplete = (req, res) => __awaiter(void 0, void 0, void 0, fu
     const payment = req.body.payment;
     try {
         yield order_1.default.findByIdAndUpdate({ _id: req.body.orderId }, {
-            address,
+            $push: { address: address },
             payment: payment,
-            status: 'waiting shipping',
+            status: 'packing',
         }, { new: true });
         res.status(200).json('order Completed');
     }
