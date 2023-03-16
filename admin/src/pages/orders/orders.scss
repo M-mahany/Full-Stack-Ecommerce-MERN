@@ -1,0 +1,27 @@
+.order{
+    display: flex;
+.conatiner{
+    flex:6;
+    .top{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    .bottom{
+        display: flex;
+        margin: 10px;
+        .status{
+            text-align: center;
+            border-radius: 20px;
+&.pending{
+   color:darkred;
+   background-color: rgba(168, 35, 35, 0.356);
+}
+&.packing{
+    color: goldenrod;
+    background-color: rgba(156, 120, 29, 0.185);
+ }
+        }
+    }
+}
+}
